@@ -23,13 +23,14 @@ We present an inpainting-based data augmentation method to simultaneously genera
 ### (II) Generating Images and Full Labels
 ![Full](./resources/full_gen.jpg)
 ### (III) Comparison with Different Settings
-* Notes:
-- Basic: Random crop, Random resize, Random flip, Color jitter
-- Vanilla: Without any data augmentation.
-- Vanilla + Aug: With only basic data augmentation.
-- Generative I: Training UNet separately with the generated images and corresponding partial labels.
-- Generative II: Using the plugged-in UNet when training the generative models.
-- Generative III: Training UNet separately with the generated images and corresponding full labels from generative models and plugged-in UNet from Generative II.
+
+_**Notes:**_
+- **Basic**: Random crop, Random resize, Random flip, Color jitter
+- **Vanilla**: Without any data augmentation.
+- **Vanilla + Aug**: With only basic data augmentation.
+- **Generative I**: Training UNet separately with the generated images and corresponding partial labels.
+- **Generative II**: Using the plugged-in UNet when training the generative models.
+- **Generative III**: Training UNet separately with the generated images and corresponding full labels from generative models and plugged-in UNet from Generative II.
 ![Comparison_quan](./resources/quantitative.jpg)
 ![Comparison_qual](./resources/nosie_visulization.jpg)
 <!-- -------------------------------- -->
@@ -56,14 +57,14 @@ it is crucial to organize your dataset according to the following structure:
 data/
    ├──train/
    │    ├── imgs/
-   │         └── ...
-   │    ├── segs/
-   │         └── ...
+   │    │    └── ...
+   │    └── segs/
+   │          └── ...
    └── test/
-       ├── imgs/
-            └── ...
-       ├── segs/
-            └── ...         
+         ├── imgs/
+         │    └── ...
+         └── segs/
+                └── ...         
 ```
 And the generated images and labels will be organized as:
 ```
@@ -78,13 +79,12 @@ outputs/
       ├──segs/  # Corresponding ground truth segmentations of the input images
       │    └── ...
       └── masks/ # Masks for inpaiting
-          └── ...
+            └── ...
 ```
 <!-- -------------------------------------------------------- -->
 ## Getting Started
 We only include the network plugged with the segmentation network. If you want to train the original inpainting network, you can remove all codes related to `self.netS`.
 1. Training: 
-    * For training on MoNuSeg dataset, run 
     ```
     python train.py --dir_image [image path] --test_path [test image path] --transform randomcrop --mask_type random
     ```
@@ -141,5 +141,3 @@ Run `tensorboard --logdir [log_folder]` and open browser to view training progre
 <!-- ------------------------ -->
 ## Acknowledgements
 We would like to thank the contributors of image inpainting network we referred to: [SCAT](https://github.com/comzzw/Generative-Image-Inpainting).
-# inpainting_based_cell_images_augmentation
-# inpainting_based_cell_images_augmentation
