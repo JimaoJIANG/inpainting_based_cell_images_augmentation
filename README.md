@@ -11,8 +11,8 @@ Jimao JIANG （蒋济懋，智能学院）, Rongyu Zhu （朱容宇，数学科�
 ## Introduction 
 We present an inpainting-based data augmentation method to simultaneously generate cellular images and corresponding partial or full segmentations. Our contributions include:
 
-1) **A Joint Generation Method for Both Images and Partial Labels with Dense Instances** 
-2) **A Joint Generation Method for Both Images and Full Labels with Embeddable Segmentation Network.**
+1) **A joint generative data augmentation method that generates images with dense cellular instances along with their corresponding partial labels.** 
+2) **A joint generative method for generating both cellular images and full labels with embeddable segmentation network.**
 ![Project_summary](./resources/project_summary.jpg)
 
 * Our project is based on SCAT [Arxiv Paper](https://arxiv.org/abs/2303.13133).
