@@ -1,7 +1,7 @@
-# Inpainting-based Labelled Data Augmentation and Segmentation Method for Cellular Images
+# Inpainting-Based Labeled Dataset Generation and Plugged Segmentation Method for Cellular Images
 
 **Final Project for _Deep Generative Models (Spring 2024)_ at _Peking University_**  
-**北京大学“深度生成模型（2024年春季）”课程大作业——“基于图像修复的生物图像的有标签数据增强及分割方法”**
+**北京大学“深度生成模型（2024年春季）”课程大作业——“基于图像修复的生物图像的有标签数据集生成及可嵌入分割方法”**
 
 
 ## Authors
@@ -11,8 +11,8 @@ Jimao JIANG （蒋济懋，智能学院）, Rongyu Zhu （朱容宇，数学科�
 ## Introduction 
 We present an inpainting-based data augmentation method to simultaneously generate cellular images and corresponding partial or full segmentations. Our contributions include:
 
-1) **A joint generative data augmentation method that generates images with dense cellular instances along with their corresponding partial labels.** 
-2) **A joint generative method for generating both cellular images and full labels with embeddable segmentation network.**
+1) **A joint generative data augmentation method that generates images with dense cellular instances along with their corresponding partial labels by improving an existing inpainting method designed for natural images.** 
+2) **A joint generative method for generating both cellular images and full labels with plugged segmentation network, meanwhile enhancing the robustness of the corresponding segmentation network.**
 ![Project_summary](./resources/project_summary.jpg)
 
 * Our project is based on SCAT [Arxiv Paper](https://arxiv.org/abs/2303.13133).
