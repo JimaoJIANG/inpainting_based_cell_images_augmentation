@@ -49,6 +49,7 @@ def main_worker(args):
                 filename_dict[filename_tmp] += 1
             else:
                 filename_dict[filename_tmp] = 1
+            # Save Images
             Image.fromarray(mask_tmp).save(os.path.join(args.outputs, 'masks', f'{filename_tmp}_{filename_dict[filename_tmp]}_mask.png'))
             Image.fromarray(comp_imgs_tmp).save(os.path.join(args.outputs, 'comp_results', f'{filename_tmp}_{filename_dict[filename_tmp]}.jpg'))
             Image.fromarray(image_tmp).save(os.path.join(args.outputs, 'gts', f'{filename_tmp}_{filename_dict[filename_tmp]}.jpg'))

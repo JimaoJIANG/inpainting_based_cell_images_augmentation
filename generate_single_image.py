@@ -48,6 +48,7 @@ def main_worker(args):
                 image_tmp = (255 * ((image[i, :3, ...] + 1.0) / 2.0).permute(1, 2, 0).detach().cpu().numpy()).astype(
                     np.uint8)
                 filename_tmp = filename[i].split('.')[0]
+                # Save Images
                 Image.fromarray(mask_tmp).save(
                     os.path.join(args.outputs, 'masks', f'{filename_tmp}_{count}_mask.png'))
                 Image.fromarray(comp_imgs_tmp).save(

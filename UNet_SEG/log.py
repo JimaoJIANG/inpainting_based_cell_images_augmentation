@@ -7,9 +7,6 @@ class Logger():
         self.log = open(filename, 'w')
 
     def write(self,message):
-        #输出到STDOUT终端
-        #self.terminal.write(message)
-        #重定向到在指定文件
         self.log.write(message)
 
     def flush(self):

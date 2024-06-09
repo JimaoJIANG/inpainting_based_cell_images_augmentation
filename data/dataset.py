@@ -104,27 +104,6 @@ class InpaintingData(Dataset):
 
 
 class MoNuSegTestDataset(torch.utils.data.dataset.Dataset):
-    """
-    A dataset class that samples 2D slices from 3D volumes and applies data augmentation.
-
-    Args:
-        cfg (dict): A dictionary containing configuration parameters for the dataset.
-
-    Attributes:
-        path_list (list): A list of paths to the input data files.
-        pad (int): The amount of padding to add to the input data.
-        aug (str): A string indicates data augmentation to the input data.
-        img_size (int): The size of the 2D slices to sample from the 3D volumes.
-        key_name_dict (dict): A dictionary mapping file paths to the names of the tensors in the data files.
-        data_list (list): A list of tensors representing the input data.
-
-    Methods:
-        __len__(): Returns the number of samples in the dataset.
-        __getitem__(idx): Returns a randomly sampled 2D slice from the input data at the given index.
-        sample_cord(data_idx, axis): Samples a 2D slice from the input data at the given index and axis.
-
-    """
-
     def __init__(self, path, img_size=1000, gt_dir='imgs', label_dir='segs'):
         self.img_size = img_size
         self.key_name_dict = {}
@@ -154,24 +133,8 @@ class MoNuSegTestDataset(torch.utils.data.dataset.Dataset):
         return len(self.gts_list)
 
     def __getitem__(self, idx):
-        """
-        Returns a randomly sampled 2D slice from the input data at the given index.
-        Returns:
-            A tensor representing a randomly sampled 2D slice from the input data.
-        """
-        # curr_data_idx = random.randrange(0, len(self.data_list)) # select dataset
-        # return self.sample_cord(curr_data_idx) # return 2D slice
         return self.sample_cord(idx)
     def sample_cord(self, data_idx):
-        """
-        Samples a 2D slice from the input data at the given index and axis.
-
-        Args:
-            data_idx (int): The index of the input data to sample from.
-
-        Returns:
-            A tensor representing a 2D slice sampled from the input data at the given index and axis.
-        """
         label = self.gts_labels_list[data_idx] # get dataset
         gt = self.gts_list[data_idx] # get dataset
 
