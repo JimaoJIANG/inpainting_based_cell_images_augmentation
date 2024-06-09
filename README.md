@@ -15,7 +15,7 @@ We present an inpainting-based data augmentation method to simultaneously genera
 2) **A joint generative method for generating both cellular images and full labels with plugged segmentation network, meanwhile enhancing the robustness of the corresponding segmentation network.**
 ![Project_summary](./resources/project_summary.jpg)
 
-* Our project is based on SCAT [Arxiv Paper](https://arxiv.org/abs/2303.13133).
+ To see more details, please refer to our report in `Report.pdf`. 
 <!-- ------------------------------------------------ -->
 ## Results
 ### (I) Generating Images and Partial Labels
