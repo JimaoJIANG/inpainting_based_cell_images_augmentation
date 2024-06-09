@@ -1,4 +1,4 @@
-# Inpainting-Based Labeled Dataset Generation and Plugged Segmentation Method for Cellular Images
+# Inpainting-Based Labeled Dataset Generation and Pluggable Segmentation Method for Cellular Images
 
 **Final Project for _Deep Generative Models (Spring 2024)_ at _Peking University_**  
 **北京大学“深度生成模型（2024年春季）”课程大作业——“基于图像修复的生物图像的有标签数据集生成及可嵌入分割方法”**
